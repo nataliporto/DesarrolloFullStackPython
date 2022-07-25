@@ -1,0 +1,148 @@
+.main-recursos {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 30px 0px;
+}
+
+.article {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    padding: 10px 25px;
+}
+
+.titulo-ejercicio {
+    font-family: 'Lora', serif;
+    color: rgb(175, 0, 88);
+    text-align: left;
+    margin: 20px 15px;
+}
+
+.ejercicio-container {
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin: 15px 30px;
+    background-color: rgba(194, 184, 191, 0.685);
+}
+
+.p-ejercicio,
+.espacio {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding-left: 5px;
+    text-align: justify;
+}
+
+.botones {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    margin: 5px 30px;
+}
+
+.btn-ejercicio {
+    margin: 10px 5px;
+    width: 90px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(175, 0, 88);
+    color: white;
+    cursor: pointer;
+
+}
+
+.btn-ejercicio:hover {
+    background-color: rgb(207, 161, 203);
+    color: rgb(175, 0, 88);
+}
+
+.raetsel {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    padding: 0px 5px;
+    text-align: justify;
+}
+
+#rta {
+    align-self: center;
+    border: 1px solid black;
+    margin-right: 15px;
+    padding: 2px;
+    height: 25px;
+}
+
+.diccionarios {
+    padding: 5px;
+    margin-left: 30px;
+}
+
+.diccionarios>a {
+    margin: 3px;
+}
+
+
+.aside {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+}
+
+.video {
+    width: 560px;
+    height: 315px;
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+    .main-recursos {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+        width: 100%;
+    }
+
+    .article {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 25px;
+    }
+
+    .ejercicio-container {
+        min-width: 510px;
+    }
+
+    .raetsel {
+        margin: 0 px 50px;
+    }
+
+    .rtaybotones {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-end;
+        margin: 10px 25px;
+    }
+
+      .video {
+        width: 480px;
+        height: 300px;
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .video {
+        width: 480px;
+        height: 300px;
+        margin-top: 15px;
+    }
+
+}

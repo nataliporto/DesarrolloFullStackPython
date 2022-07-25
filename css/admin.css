@@ -1,0 +1,36 @@
+.main-admin {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin-bottom: 0;
+}
+
+.form {
+    border: 1px solid rgb(177, 174, 174);
+    border-radius: 7px;
+    background-color: rgb(165, 161, 161);
+    font-weight: 700;
+    padding: 20px;
+    width: fit-content;
+}
+
+.form-label,
+.form-input {
+    margin: 7px;
+    padding: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn-ingresar {
+    margin-left: 12px;
+    margin-top: 15px;
+    width: 90px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(175, 0, 88);
+    color: white;
+    cursor: pointer;
+}
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Apuntes de Alemán</title>
+    <link rel="icon" href="./Images/pretzel.ico">
+    <script src="https://kit.fontawesome.com/953cd894ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./CSS/clasesparticulares.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="header">
+                <a class="logo" href="./home.html">Mis Apuntes de Alemán</a>
+                <div class="header-right">
+                    <a href="./home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <a class="active" href="./clasesparticulares.html"><i class="fa-solid fa-graduation-cap"></i>
+                        Aprende Conmigo</a>
+                    <a href="./recursos.html"><i class="fa-solid fa-book"></i> Recursos</a>
+                    <a href="./contacto.html"><i class="fa-solid fa-feather-pointed"></i> Contáctame</a>
+                    <a href="./admin.html"><i class="fa-solid fa-user-gear"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-clasesparticulares">
+                <p>¿Quieres aprender alemán conmigo? Contáctame por medio del <a href="./contacto.html">formulario de
+                        contacto</a>
+                    o
+                    selecciona tu clase dentro de la oferta de clases:</p>
+
+                 <div class="container" id="app">
+                    <div v-for="curso in cursos" class="card">
+                        
+                        <img v-bind:src="curso.imagen" :alt="curso.nombre">
+                        
+                        <div class="card-body">
+                            <h3>{{curso.nombre}}</h3>
+                            <p>{{curso.descripcion}}</p>
+                            <p>Nivel: {{curso.nivel}}</p>
+                            <p>Duración: {{curso.duracion}}</p>
+                            <p>Inicio: {{curso.inicio}}</p>
+                            <p>Días y Horarios: {{curso.dias_horarios}}</p>
+                            <p>Precio: {{curso.precio}}</p>
+                        </div>
+                    </div>  
+                    
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="direccion">
+                    <div id="direccion">
+                        <p class="parrafo-footer">Nos puedes encontrar en:</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-map-location-dot"></i> Mis Apuntes de Alemán</p>
+                        <p class="parrafo-footer"> Calle Falsa 777</p>
+                        <p class="parrafo-footer"> CP: 1111 - Ciudad de Buenos Aires </p>
+                        <p class="parrafo-footer"> Argentina</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-phone"></i> (+54 11) 7777 7777</p>
+                        <p class="parrafo-footer"><i class="fa-brands fa-whatsapp"></i> (+54 9 11) 9999 9999</p>
+                    </div>
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105094.69690539509!2d-58.48788676787112!3d-34.598869163382986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654823654640!5m2!1ses!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+                    </div>
+                </div>
+                <div class="redesycopyright">
+                    <nav>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </nav>
+                    <p>&copy; 2022 Mis Apuntes de Alemán</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/clasesparticulares.js"></script>
+</body>
+
+</html>

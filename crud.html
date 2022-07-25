@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <script src="https://kit.fontawesome.com/953cd894ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/mainCrud.css">
+
+</head>
+
+<body>
+    <main>
+        <div class="container" id="app">
+            <a href="./clasesparticulares.html" class="special"><i class="fa-solid fa-graduation-cap"></i>Bienvenido usuario Admin </a>
+            <h2>Cursos 2022</h2>
+            <section v-if="errored">
+                <p>Lo sentimos, no es posible obtener la información en este momento, por favor intente nuevamente mas
+                    tarde</p>
+            </section>
+            <section v-else>
+                <div v-if="loading">Cargando....
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only"></span>
+                    </div>
+                </div>
+                <div v-else>
+                    <a href="create.html"  id="btn-nuevo">Nuevo</a>
+                    <br><br>
+                    <table id="tabla-cursos">
+                        <tr>
+                            <th>Id</th>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Nivel</th>
+                            <th>Duración</th>
+                            <th>Inicio</th>
+                            <th>Días y Horarios</th>
+                            <th>Precio</th>
+                            <th>Acciones</th>
+                        </tr>
+                        <tr v-for="curso in cursos">
+                            <td>{{curso.id}}</td>
+                            <td>{{curso.imagen}}</td>
+                            <td>{{curso.nombre}}</td>
+                            <td>{{curso.descripcion}}</td>
+                            <td>{{curso.nivel}}</td>
+                            <td>{{curso.duracion}}</td>
+                            <td>{{curso.inicio}}</td>
+                            <td>{{curso.dias_horarios}}</td>
+                            <td>{{curso.precio}}</td>
+                            <td>
+                                <br>
+                                <a :href="'update.html?id='+curso.id+'&imagen='+curso.imagen+'&nombre='+curso.nombre+'&descripcion='+curso.descripcion+'&nivel='+curso.nivel+'&duracion='+curso.duracion+'&inicio='+curso.inicio+'&dias_horarios='+curso.dias_horarios+'&precio='+curso.precio"
+                                    id="btn-modificar">Modificar</a><br><br> <!--Acá asumo que los pares clave/valor vienen en un orden 
+                                        particular y que vienen todos. Eso no está bien. Parseo los parámetro separando con "&" para 
+                                        obtener una lista de clave/valor. Luego de cada par me quedo con el valor, descartando la clave 
+                                        y asumo por orden a qué componente ponerle el valor. Todo lo que viene después del "?" son 
+                                        parámetros (Query Strings). Esos parámetros tienen la forma de clave=valor, y si tenés más de 
+                                        un parámetro se separan por "&". Como tienen forma de clave=valor, tendrían que funcionar igual
+                                         si pasás `?nombre=Maria&apellido=Mueller` o `?apellido=Mueller&nombre=Maria`, no tendría que
+                                          importar el orden porque tendrías que asegurarte que Maria es el nombre porque acompaña la 
+                                          clave nombre, no porque te lo mandan primero. Pero acá lo que se hace es armar una lista 
+                                          ['Maria', 'Mueller'] y dice que Maria es el nombre por ser el 1°, se busca el componente 
+                                          txtNombre y se lo setea. Luego el 2° es apellido, busca el txtApellido y se lo setea. Si mando 
+                                          los parámetros al revés, la lista va a ser ['Mueller', 'Maria'] y va a pensar que el apellido 
+                                          es el nombre y viceversa. También puede pasar que no se manden todos los parámetros y se rompa 
+                                          porque se desfase la lista. Pasarlo por URL está bien, el problema está en el código que manipula 
+                                          la url. Ahora anda porque yo la armé y la armé de la manera en que yo esperaba que llegaran los 
+                                          parámetros. Pero esto es una solución débil. Cuando se hace un html que recibe parámetros, no se
+                                           debe asumir que siempre van a venir los parámetros así.  -->
+                                <button v-on:click="eliminar(curso.id)" id="btn-eliminar">
+                                    Eliminar </button>
+                            </td>
+                        </tr>
+                    </table>
+            </section>
+            <br>
+            <a href="./home.html" id="btn-home">Volver al Home</a>
+        </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./js/mainCRUD.js"></script>
+</body>
+
+</html>

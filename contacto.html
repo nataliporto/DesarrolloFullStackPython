@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Apuntes de Alemán</title>
+    <link rel="icon" href="./Images/pretzel.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/953cd894ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./CSS/contacto.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="header">
+                <a class="logo" href="./home.html">Mis Apuntes de Alemán</a>
+                <div class="header-right">
+                    <a href="./home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="./clasesparticulares.html"><i class="fa-solid fa-graduation-cap"></i> Aprende Conmigo</a>
+                    <a href="./recursos.html"><i class="fa-solid fa-book"></i> Recursos</a>
+                    <a class="active" href="./contacto.html"><i class="fa-solid fa-feather-pointed"></i> Contáctame</a>
+                    <a href="./admin.html"><i class="fa-solid fa-user-gear"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-contacto">
+                <p>Puedes contactarme a través del siguiente formulario de contacto:</p>
+
+                <div class="formulario">
+
+                    <form name="formulario" action="./formulario_enviado.html" onsubmit="return validar()"
+                        method="get">
+                        <div><label for="nombre" class="form-label">Nombre y apellido:</label> <input type="text"
+                                class="form-control" name="nombre" id="nombre">
+                        </div>
+                        <br>
+                        <div><label for="edad" class="form-label">Edad:</label> <input type="number"
+                                class="form-control" name="edad" id="edad"></div>
+                        <br>
+                        <div> <label for="email" class="form-label">Email:</label> <input type="mail"
+                                class="form-control" name="mail" id="mail"></div>
+                        <br>
+                        <div><label for="nivel" class="form-label">Nivel que deseo cursar:</label>
+                            <select class="form-select" name="nivel">
+                                <option>Sin conocimientos previos</option>
+                                <option>A1</option>
+                                <option>A2</option>
+                                <option>B1</option>
+                                <option>B2</option>
+                                <option>C1</option>
+                                <option>Necesito un examen de nivel</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div>
+
+                            <label for="comentarios" class="form-label">Comentarios:</label>
+                            <textarea name="Comentario" class="form-control" cols="30"
+                                rows="10">¡Hola! Soy... y me gustaría recibir información sobre los cursos de alemán.</textarea>
+                        </div>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="Enviar">
+                    </form>
+
+                </div>
+                <br><br>
+                <p>O bien escribiéndome a: <a href="mailto:sommerdeutschkurs@gmail.com">sommerdeutschkurs@gmail.com</a>
+                </p>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="direccion">
+                    <div id="direccion">
+                        <p class="parrafo-footer">Nos puedes encontrar en:</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-map-location-dot"></i> Mis Apuntes de Alemán</p>
+                        <p class="parrafo-footer"> Calle Falsa 777</p>
+                        <p class="parrafo-footer"> CP: 1111 - Ciudad de Buenos Aires </p>
+                        <p class="parrafo-footer"> Argentina</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-phone"></i> (+54 11) 7777 7777</p>
+                        <p class="parrafo-footer"><i class="fa-brands fa-whatsapp"></i> (+54 9 11) 9999 9999</p>
+                    </div>
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105094.69690539509!2d-58.48788676787112!3d-34.598869163382986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654823654640!5m2!1ses!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+                    </div>
+                </div>
+                <div class="redesycopyright">
+                    <nav>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </nav>
+                    <p>&copy; 2022 Mis Apuntes de Alemán</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./JS/validacion.js"></script>
+</body>
+
+</html>
