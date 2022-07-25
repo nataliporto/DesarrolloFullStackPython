@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Apuntes de Alemán</title>
+    <link rel="icon" href="./Images/pretzel.ico">
+    <script src="https://kit.fontawesome.com/953cd894ce.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./CSS/recursos.css">
+</head>
+
+<body>
+    <div class="body">
+        <header>
+            <div class="header">
+                <a class="logo" href="./home.html">Mis Apuntes de Alemán</a>
+                <div class="header-right">
+                    <a href="./home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    <a href="./clasesparticulares.html"><i class="fa-solid fa-graduation-cap"></i> Aprende Conmigo</a>
+                    <a class="active" href="./recursos.html"><i class="fa-solid fa-book"></i> Recursos</a>
+                    <a href="./contacto.html"><i class="fa-solid fa-feather-pointed"></i> Contáctame</a>
+                    <a href="./admin.html"><i class="fa-solid fa-user-gear"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-recursos">
+                <article class="article">
+
+                    <div class="ejercicio-container">
+                        <h1 class="titulo-ejercicio" title="sich vorstellen = presentarse">Sich Vorstellen</h1>
+                        <p class="p-ejercicio">Hallo! Ich <input type="text" size="21" class="espacio" id="1" /> Emine
+                            Yavuz,</p>
+                        <p class="p-ejercicio"> ich <input type="text" size="21" class="espacio" id="2" /> 35 Jahre
+                            alt und</p>
+                        <p class="p-ejercicio">ich
+                            <input type="text" size="21" class="espacio" id="3" /> aus der Türkei.
+                        </p>
+                        <p class="p-ejercicio">Ich <input type="text" size="21" class="espacio" id="4" /> Ingenieurin
+                            von Beruf</p>
+                        <p class="p-ejercicio">und <input type="text" size="21" class="espacio" id="5" /> bei
+                            Lufthansa.
+                        </p>
+                        <p class="p-ejercicio">Meine Hobbys
+                            <input type="text" size="21" class="espacio" id="6" />malen und singen.
+                        </p>
+                        <div class="botones">
+                            <button onclick="corregir()" class="btn-ejercicio"
+                                title="korrigieren = corregir">Korrigieren</button>
+                            <button onclick="darSolucion()" class="btn-ejercicio"
+                                title="die Lösung,-en= la solución">Lösungen</button>
+                            <button onclick="borrar()" class="btn-ejercicio" title="löschen = borrar">Löschen</button>
+                        </div>
+                    </div>
+
+                    <div class="ejercicio-container">
+                        <h1 class="titulo-ejercicio" title="das Rätsel = la adivinanza">Rätsel</h1>
+                        <p class="raetsel">Ich habe drei verschiedene Augen,
+                            und trotzdem kann nichts sehen.
+                            Und zu Fahrern und Spaziergängern
+                            sage ich wann zu halten oder wann zu gehen.</p>
+
+                        <div>
+                            <div class="rtaybotones">
+                                <div>
+                                    <input type="text" id="rta" size="20" />
+                                </div>
+                                <div>
+                                    <button onclick="corregir2()" class="btn-ejercicio"
+                                        title="korrigieren = corregir">Korrigieren</button>
+                                    <button onclick="darSolucion2()" class="btn-ejercicio"
+                                        title="die Lösung,-en= la solución">Lösungen</button>
+                                    <button onclick="borrar2()" class="btn-ejercicio"
+                                        title="löschen = borrar">Löschen</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="diccionario">
+                        <h1 class="titulo-ejercicio" title="das Online-Wörterbuch, ¨er = el diccionario en línea">
+                            Online-Wörtebücher</h1>
+                        <nav class="diccionarios">
+                            <a href="https://es.pons.com/" target="_blank"><img src="./images/pons.jpg"
+                                    alt="Diccionario Pons" width="100" height="100"></a>
+                            <a href="https://www.duden.de/" target="_blank"><img src="./images/duden.jpg"
+                                    alt="Diccionario Duden" width="100" height="100"></a>
+                            <a href="https://www.leo.org/alem%C3%A1n-espa%C3%B1ol" target="_blank"><img
+                                    src="./images/leo.jpg" alt="Diccionario Leo" width="200" height="100"></a>
+                            <a href="https://de.langenscheidt.com/" target="_blank"><img src="./images/langescheidt.jpg"
+                                    alt="Diccionario Langenscheidt" width="100" height="100"></a>
+                        </nav>
+                    </div>
+
+                </article>
+                <aside class="aside">
+                    <h1 class="titulo-ejercicio" title="Aprender alemán con videos">Deutsch lernen mit Videos</h1>
+
+                    <iframe src="https://www.youtube.com/embed/4-eDoThe6qo" class="video" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <br><br>
+                    <iframe src="https://www.youtube.com/embed/Lg5P2w_Ro1c" class="video" title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+
+
+                </aside>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer">
+                <div class="direccion">
+                    <div id="direccion">
+                        <p class="parrafo-footer">Nos puedes encontrar en:</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-map-location-dot"></i> Mis Apuntes de Alemán</p>
+                        <p class="parrafo-footer"> Calle Falsa 777</p>
+                        <p class="parrafo-footer"> CP: 1111 - Ciudad de Buenos Aires </p>
+                        <p class="parrafo-footer"> Argentina</p>
+                        <p class="parrafo-footer"><i class="fa-solid fa-phone"></i> (+54 11) 7777 7777</p>
+                        <p class="parrafo-footer"><i class="fa-brands fa-whatsapp"></i> (+54 9 11) 9999 9999</p>
+                    </div>
+                    <div class="mapa">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105094.69690539509!2d-58.48788676787112!3d-34.598869163382986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3b4ef90cbd%3A0xa0b3812e88e88e87!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses!2sar!4v1654823654640!5m2!1ses!2sar"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" id="mapa"></iframe>
+                    </div>
+                </div>
+                <div class="redesycopyright">
+                    <nav>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                    </nav>
+                    <p>&copy; 2022 Mis Apuntes de Alemán</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./JS/recursos.js"></script>
+</body>
+
+</html>
