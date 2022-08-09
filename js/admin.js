@@ -2,7 +2,7 @@ function ingresar() {
     let pass = document.getElementById("contraseña").value;
     let submitOK = true;
 
-    if (pass != "geschafft") {
+    if (pass != "password") {
         alert("Ingrese una contraseña válida.");
         submitOK = false;
     }
