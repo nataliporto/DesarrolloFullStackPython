@@ -1,18 +1,19 @@
 var args = location.search.substr(1).split('&');
-var parts = []
-for (let i = 0; i < args.length; ++i) {
-    parts[i] = args[i].split('=');
+var parts = {}
+for (let i = 0; i < args.length; ++i) { 
+    let aux = args[i].split('=');
+    parts[aux[0]] = aux[1] 
 }
 console.log(args)
-document.getElementById("txtId").value = parts[0][1]
-document.getElementById("txtImagen").value = decodeURI(parts[1][1])
-document.getElementById("txtNombre").value = decodeURI(parts[2][1])
-document.getElementById("txtDescripcion").value = decodeURI(parts[3][1])
-document.getElementById("txtNivel").value = decodeURI(parts[4][1])
-document.getElementById("txtDuracion").value = decodeURI(parts[5][1])
-document.getElementById("txtInicio").value = parts[6][1]
-document.getElementById("txtDiasHorarios").value = decodeURI(parts[7][1])
-document.getElementById("txtPrecio").value = parts[8][1]
+document.getElementById("txtId").value = parts["id"]
+document.getElementById("txtImagen").value = decodeURI(parts["imagen"])
+document.getElementById("txtNombre").value = decodeURI(parts["nombre"])
+document.getElementById("txtDescripcion").value = decodeURI(parts["descripcion"])
+document.getElementById("txtNivel").value = decodeURI(parts["nivel"])
+document.getElementById("txtDuracion").value = decodeURI(parts["duracion"])
+document.getElementById("txtInicio").value = parts["inicio"]
+document.getElementById("txtDiasHorarios").value = decodeURI(parts["dias_horarios"])
+document.getElementById("txtPrecio").value = parts["precio"]
 
 function modificar() {
     let id = document.getElementById("txtId").value
